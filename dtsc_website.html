@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DTSC 2025-2030 : L'Avenir de l'IA Embodied</title>
+    <meta name="description" content="Anticipation scientifique des 5 prochaines années selon la Dynamique Techno-Sociale Cumulative">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #0066ff;
+            --secondary-color: #00ffcc;
+            --accent-color: #ff6b35;
+            --dark-bg: #0a0a0a;
+            --card-bg: #1a1a1a;
+            --text-primary: #ffffff;
+            --text-secondary: #b0b0b0;
+            --gradient-1: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --gradient-2: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            --gradient-3: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--dark-bg);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        .nav-container {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            background: rgba(26, 26, 26, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .nav-menu {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .nav-menu a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9em;
+            transition: all 0.3s ease;
+            padding: 8px 12px;
+            border-radius: 8px;
+            display: block;
+        }
+
+        .nav-menu a:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateX(5px);
+        }
+
+        /* Header */
+        .header {
+            background: var(--gradient-1);
+            padding: 100px 20px 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .header h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 800;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .header .subtitle {
+            font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--accent-color);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255, 107, 53, 0.4);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Sections */
+        .section {
+            padding: 80px 0;
+            position: relative;
+        }
+
+        .section:nth-child(even) {
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 30px;
+            text-align: center;
+            background: var(--gradient-3);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            margin: 60px 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--gradient-1);
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            display: flex;
+            align-items: center;
+            margin: 40px 0;
+            position: relative;
+        }
+
+        .timeline-item:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .timeline-content {
+            background: var(--card-bg);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 0 30px;
+            flex: 1;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .timeline-content:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 102, 255, 0.2);
+        }
+
+        .timeline-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5em;
+            position: relative;
+            z-index: 2;
+        }
+
+        .timeline-year {
+            font-size: 1.1em;
+            font-weight: 700;
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+        }
+
+        .timeline-title {
+            font-size: 1.3em;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        /* Cards Grid */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin: 50px 0;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-1);
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .card-icon {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .card-title {
+            font-size: 1.4em;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: var(--secondary-color);
+        }
+
+        .card-text {
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        /* Stats */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin: 50px 0;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 30px 20px;
+            background: var(--card-bg);
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .stat-number {
+            font-size: 2.5em;
+            font-weight: 800;
+            background: var(--gradient-2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            color: var(--text-secondary);
+            font-size: 0.9em;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-container {
+                position: static;
+                margin: 20px;
+                border-radius: 10px;
+            }
+
+            .nav-menu {
+                flex-direction: row;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+            .header {
+                padding: 60px 20px 40px;
+            }
+
+            .timeline::before {
+                left: 30px;
+            }
+
+            .timeline-item {
+                flex-direction: column;
+                align-items: flex-start;
+                margin-left: 60px;
+            }
+
+            .timeline-item:nth-child(even) {
+                flex-direction: column;
+            }
+
+            .timeline-content {
+                margin: 20px 0 0 0;
+            }
+
+            .timeline-icon {
+                position: absolute;
+                left: -75px;
+                width: 50px;
+                height: 50px;
+                font-size: 1.2em;
+            }
+
+            .cards-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Scroll animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--card-bg);
+            padding: 40px 20px;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .footer p {
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--secondary-color);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav-container">
+        <ul class="nav-menu">
+            <li><a href="#intro">Introduction</a></li>
+            <li><a href="#vagues">Les 3 Vagues</a></li>
+            <li><a href="#predictions">Prédictions</a></li>
+            <li><a href="#risques">Risques & Opportunités</a></li>
+            <li><a href="#strategies">Stratégies</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <h1>🔮 DTSC 2025-2030</h1>
+            <p class="subtitle">L'Anticipation Scientifique de l'ère IA Embodied</p>
+            <a href="#intro" class="cta-button">Découvrir les Prédictions</a>
+        </div>
+    </header>
+
+    <!-- Introduction -->
+    <section id="intro" class="section">
+        <div class="container">
+            <h2 class="section-title">🧠 L'IA Embodied : Prochaine Révolution</h2>
+            
+            <div class="cards-grid">
+                <div class="card fade-in">
+                    <span class="card-icon">🚀</span>
+                    <h3 class="card-title">Accélération Exponentielle</h3>
+                    <p class="card-text">De 400 000 ans (feu) à 5 ans (IA embodied), l'humanité approche du genou de la courbe exponentielle technologique.</p>
+                </div>
+                
+                <div class="card fade-in">
+                    <span class="card-icon">⚡</span>
+                    <h3 class="card-title">Fenêtre Critique</h3>
+                    <p class="card-text">2025-2027 sera décisif. Comme l'imprimerie, l'IA embodied redistribuera drastiquement les cartes économiques.</p>
+                </div>
+                
+                <div class="card fade-in">
+                    <span class="card-icon">🤖</span>
+                    <h3 class="card-title">Vers la Singularité</h3>
+                    <p class="card-text">L'IA embodied prépare l'AGI puis la Super-Intelligence. Dernière décennie avant que l'IA dépasse l'humanité.</p>
+                </div>
+            </div>
+
+            <div class="stats-grid fade-in">
+                <div class="stat-item">
+                    <div class="stat-number">40%</div>
+                    <div class="stat-label">Emplois de bureau transformés d'ici 2030</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">1M</div>
+                    <div class="stat-label">Agents IA personnels actifs en 2027</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">500M€</div>
+                    <div class="stat-label">Marché des agents IA en 2030</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">+15%</div>
+                    <div class="stat-label">Gain de productivité globale</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Les 3 Vagues -->
+    <section id="vagues" class="section">
+        <div class="container">
+            <h2 class="section-title">🌊 Les 3 Vagues de Transformation</h2>
+            
+            <div class="timeline">
+                <div class="timeline-item fade-in">
+                    <div class="timeline-icon">🚀</div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">2025-2026</div>
+                        <h3 class="timeline-title">VAGUE 1 : L'Explosion des Agents</h3>
+                        <p><strong>Secteurs touchés :</strong></p>
+                        <ul style="margin: 15px 0; padding-left: 20px; color: var(--text-secondary);">
+                            <li>80% du service client automatisé</li>
+                            <li>Assistants personnels proactifs (Siri/Alexa 2.0)</li>
+                            <li>IA qui code en autonomie</li>
+                            <li>Première vague de disruption des cols blancs</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item fade-in">
+                    <div class="timeline-icon">🏗️</div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">2026-2028</div>
+                        <h3 class="timeline-title">VAGUE 2 : L'IA Incarnée</h3>
+                        <p><strong>Innovations clés :</strong></p>
+                        <ul style="margin: 15px 0; padding-left: 20px; color: var(--text-secondary);">
+                            <li>Robots domestiques généralisés</li>
+                            <li>Véhicules 100% autonomes</li>
+                            <li>Espaces intelligents adaptatifs</li>
+                            <li>Entreprises centaures (humains + IA)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item fade-in">
+                    <div class="timeline-icon">🧬</div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">2027-2030</div>
+                        <h3 class="timeline-title">VAGUE 3 : La Fusion Cognitive</h3>
+                        <p><strong>Ruptures technologiques :</strong></p>
+                        <ul style="margin: 15px 0; padding-left: 20px; color: var(--text-secondary);">
+                            <li>Interfaces neuronales commerciales</li>
+                            <li>IA créative 100% autonome</li>
+                            <li>Gouvernance algorithmique locale</li>
+                            <li>Économie contributive post-salariale</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prédictions -->
+    <section id="predictions" class="section">
+        <div class="container">
+            <h2 class="section-title">🎯 Prédictions DTSC Spécifiques</h2>
+            
+            <div class="cards-grid">
+                <div class="card fade-in">
+                    <span class="card-icon">📊</span>
+                    <h3 class="card-title">Points de Basculement</h3>
+                    <p class="card-text">
+                        <strong>2026 :</strong> Le "ChatGPT Moment" des agents<br>
+                        <strong>2027 :</strong> Effondrement du 1er secteur économique<br>
+                        <strong>2028 :</strong> Premier débat "droits de l'IA"<br>
+                        <strong>2030 :</strong> IA dépasse l'intelligence humaine
+                    </p>
+                </div>
+                
+                <div class="card fade-in">
+                    <span class="card-icon">🌍</span>
+                    <h3 class="card-title">Géopolitique IA</h3>
+                    <p class="card-text">
+                        <strong>USA :</strong> Leadership IA généraliste<br>
+                        <strong>Chine :</strong> Domination IA appliquée<br>
+                        <strong>Europe :</strong> Niche IA éthique<br>
+                        Guerre des talents + diplomatie algorithmique
+                    </p>
+                </div>
+                
+                <div class="card fade-in">
+                    <span class="card-icon">📈</span>
+                    <h3 class="card-title">Impact Économique</h3>
+                    <p class="card-text">
+                        200M nouveaux emplois créés<br>
+                        300M emplois supprimés<br>
+                        100M robots domestiques déployés<br>
+                        Marché 500 milliards $ en 2030
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Risques & Opportunités -->
+    <section id="risques" class="section">
+        <div class="container">
+            <h2 class="section-title">🚨 Risques & Opportunités</h2>
+            
+            <div class="cards-grid">
+                <div class="card fade-in" style="border-top-color: var(--accent-color);">
+                    <span class="card-icon">⚠️</span>
+                    <h3 class="card-title">Risques Systémiques</h3>
+                    <ul style="color: var(--text-secondary); line-height: 1.8;">
+                        <li><strong>Effondrement cognitif :</strong> Dépendance totale → atrophie humaine</li>
+                        <li><strong>Concentration du pouvoir :</strong> 3-5 entreprises contrôlent l'intelligence mondiale</li>
+                        <li><strong>Fracture sociale :</strong> Élites augmentées vs masses obsolètes</li>
+                    </ul>
+                </div>
+                
+                <div class="card fade-in" style="border-top-color: var(--secondary-color);">
+                    <span class="card-icon">🌟</span>
+                    <h3 class="card-title">Opportunités Civilisationnelles</h3>
+                    <ul style="color: var(--text-secondary); line-height: 1.8;">
+                        <li><strong>Renaissance créative :</strong> Libération pour l'art et les relations</li>
+                        <li><strong>Résolution des grands défis :</strong> Climat, maladies, pauvreté</li>
+                        <li><strong>Expansion cosmique :</strong> Humanité multiplanétaire dès 2030s</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stratégies -->
+    <section id="strategies" class="section">
+        <div class="container">
+            <h2 class="section-title">🧭 Stratégies d'Adaptation</h2>
+            
+            <div class="cards-grid">
+                <div class="card fade-in">
+                    <span class="card-icon">👤</span>
+                    <h3 class="card-title">Pour les Individus</h3>
+                    <p class="card-text">
+                        • Développer des compétences "IA-proof"<br>
+                        • Cultiver créativité, empathie, leadership éthique<br>
+                        • Apprendre à orchestrer des équipes d'IA<br>
+                        • Expérimenter précocement avec les agents
+                    </p>
+                </div>
+                
+                <div class="card fade-in">
+                    <span class="card-icon">🏢</span>
+                    <h3 class="card-title">Pour les Organisations</h3>
+                    <p class="card-text">
+                        • Repenser les processus autour de la collaboration homme-IA<br>
+                        • Former massivement à la supervision d'agents<br>
+                        • Identifier les niches humaines irremplaçables<br>
+                        • Développer des avantages compétitifs empathiques
+                    </p>
+                </div>
+                
+                <div class="card fade-in">
+                    <span class="card-icon">🏛️</span>
+                    <h3 class="card-title">Pour les Sociétés</h3>
+                    <p class="card-text">
+                        • Cadres juridiques évolutifs pour l'IA<br>
+                        • Protection sociale renforcée pendant la transition<br>
+                        • Système éducatif centré sur la collaboration avec l'IA<br>
+                        • Formation continue généralisée
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>🔬 <strong>Analyse DTSC :</strong> Cette anticipation montre comment les patterns historiques permettent de cartographier l'avenir probable. La théorie DTSC révèle que nous sommes à l'aube de la transformation la plus radicale de l'histoire humaine.</p>
+            
+            <div class="footer-links">
+                <a href="#intro">Retour au début</a>
+                <a href="#vagues">Les 3 Vagues</a>
+                <a href="#predictions">Prédictions</a>
+                <a href="#strategies">Stratégies</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all fade-in elements
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Active navigation highlighting
+        const sections = document.querySelectorAll('.section');
+        const navLinks = document.querySelectorAll('.nav-menu a');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+
+    <style>
+        .nav-menu a.active {
+            background: var(--primary-color);
+            color: white;
+        }
+    </style>
+</body>
+</html>
