@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Évolution Humaine – Annexe DTSC</title>
+  <style>
+    :root{
+      --ink:#2c3e50; --muted:#7f8c8d; --accent:#3498db; --warm:#e67e22; --ok:#27ae60; --warn:#e74c3c; --bg:#ffffff;
+    }
+    *{box-sizing:border-box; max-width:100%}
+    body{font-family:"Segoe UI", Roboto, system-ui, -apple-system, sans-serif; margin:0; color:var(--ink); background:var(--bg); line-height:1.55}
+    header{padding:28px 20px; background:linear-gradient(135deg,#667eea,#764ba2); color:white}
+    header h1{margin:0 0 6px; font-size:2.1rem}
+    header p{margin:0; opacity:.95}
+    main{padding:20px}
+    h2{border-left:6px solid var(--accent); padding-left:12px; margin:28px 0 12px}
+    h3{margin:20px 0 8px}
+    p{margin:10px 0}
+    .lead{font-size:1.03rem; color:#213547}
+    .tag{display:inline-block; font-size:.78rem; padding:.2rem .55rem; border-radius:999px; background:#eef6ff; color:#0b5fa8; border:1px solid #e1f0ff; margin-right:6px}
+    .grid{display:grid; gap:14px}
+    .grid.cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .grid.cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+    @media (max-width:900px){.grid.cols-2,.grid.cols-3{grid-template-columns:1fr}}
+    .card{background:white; border:1px solid #eef0f3; border-left:5px solid var(--accent); border-radius:12px; padding:14px; box-shadow:0 6px 18px rgba(0,0,0,.04)}
+    .card.warm{border-left-color:var(--warm)}
+    .card.ok{border-left-color:var(--ok)}
+    .card.warn{border-left-color:var(--warn)}
+    .small{color:var(--muted); font-size:.9rem}
+    .pill{background:#f6f8fa; border:1px solid #e9ecef; border-radius:8px; padding:8px 10px; display:inline-block; margin:4px 6px 0 0}
+    .timeline{display:flex; gap:8px; overflow-x:auto; padding:10px; border:1px solid #eef0f3; border-radius:12px}
+    .tl-item{min-width:220px; background:white; border:1px solid #eef0f3; border-radius:12px; padding:10px}
+    .tl-title{font-weight:600}
+    .eq{background:#0b5fa8; color:white; padding:10px 12px; border-radius:10px; font-family:ui-monospace, SFMono-Regular, Menlo, monospace; font-size:.9rem}
+    .schema{border:1px dashed #d6e4ff; padding:12px; border-radius:12px; background:#fafcff}
+    .kbd{font-family:ui-monospace,Consolas,monospace; background:#f2f4f7; border:1px solid #e5e7eb; padding:2px 6px; border-radius:6px}
+    .callout{border-left:6px solid var(--warm); background:#fff9f2; border:1px solid #ffe8cc; padding:12px; border-radius:12px}
+    footer{margin:26px 0 10px; color:var(--muted); font-size:.9rem}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Évolution Humaine – Annexe à la DTSC</h1>
+    <p>Contre l'hypothèse implicite d'un « Homme » invariant : coévolution <strong>génétique</strong>, <strong>culturelle</strong> et <strong>technique</strong> à travers les époques DTSC, et pistes de <strong>prévision</strong> pour la prochaine mutation.</p>
+  </header>
+  <main>
+    <section>
+      <p class="lead">La DTSC décrit l'accélération cumulative techno‑sociale. Cette annexe <em>Évolution Humaine</em> explicite le fondement anthropologique : l'humain <strong>change avec</strong> ses techniques. Les transformations sont (1) <strong>génétiques</strong> (sélections, flux, dérive), (2) <strong>culturelles</strong> (normes, institutions), (3) <strong>épigénétiques & microbiote</strong>, (4) <strong>cognitives</strong> (réseaux attentionnels, littératie), (5) <strong>somato‑environnementales</strong> (régimes, rythmes, toxiques), (6) <strong>cybernétiques</strong> (homme‑machine).</p>
+      <div class="schema">
+        <strong>Principe de coévolution DTSC‑H :</strong>
+        <div class="eq">Humains(t+1) = H(t) ∘ C(t) ∘ T(t) ∘ Humains(t)</div>
+        <p class="small">où <strong>T(t)</strong> = techniques, <strong>C(t)</strong> = institutions & normes, <strong>H(t)</strong> = opérateur d'évolution humaine (gènes, épigénome, microbiote, cognition). L'ordre n'est pas commutatif : le séquencement des révolutions importe.</p>
+      </div>
+    </section>
+
+    <h2>1) Coévolution par époques DTSC</h2>
+    <div class="timeline" aria-label="Époques DTSC et effets humains">
+      <div class="tl-item">
+        <div class="tl-title">Feu & Camp (−400k)</div>
+        <ul>
+          <li><strong>Somatique :</strong> cuisson → biodisponibilité, dépenses digestives ↓ ; sociabilité nocturne ↑.</li>
+          <li><strong>Cognitif :</strong> récit au foyer, mémoire épisodique partagée, régulation peur/prédateurs.</li>
+          <li><strong>Gènes potentiels :</strong> pressions sur métabolisme, odorat, tolérance fumées (hypothèse), rythmes circadiens.</li>
+        </ul>
+      </div>
+      <div class="tl-item">
+        <div class="tl-title">Agriculture (−10k)</div>
+        <ul>
+          <li><strong>Somatique :</strong> néolithisation → caries, pathogènes zoonotiques, stature ↓ puis ↑.</li>
+          <li><strong>Culturel :</strong> sédentarité, héritage, castes → nouvelles pressions sociales.</li>
+          <li><strong>Gènes :</strong> tolérances alimentaires (ex. amidon, lait), hémoglobine & pathogènes.</li>
+        </ul>
+      </div>
+      <div class="tl-item">
+        <div class="tl-title">Écriture (−3200)</div>
+        <ul>
+          <li><strong>Cognitif :</strong> externalisation mémoire → reconfiguration des apprentissages.</li>
+          <li><strong>Culturel :</strong> écoles de scribes, bureaucraties → sélection de niches professionnelles.</li>
+          <li><strong>Neuro‑éducation :</strong> plasticité liée à la littératie (cortex visuo‑langagier).</li>
+        </ul>
+      </div>
+      <div class="tl-item">
+        <div class="tl-title">Imprimerie (1450)</div>
+        <ul>
+          <li><strong>Cognitif :</strong> standardisation des langues, lecture silencieuse → attention soutenue.</li>
+          <li><strong>Culturel :</strong> diffusion de masse, réforme, science moderne.</li>
+          <li><strong>Santé :</strong> alphabétisation ↔ hygiène publique (boucles socio‑sanitaires).</li>
+        </ul>
+      </div>
+      <div class="tl-item">
+        <div class="tl-title">Vapeur (1769)</div>
+        <ul>
+          <li><strong>Somatique :</strong> urbanisation, polluants, rythmes industriels → chrono‑stress.</li>
+          <li><strong>Culturel :</strong> temps horloge, discipline, salariat.</li>
+          <li><strong>Sélection sociale :</strong> différenciation des trajectoires réproductives par classe.</li>
+        </ul>
+      </div>
+      <div class="tl-item">
+        <div class="tl-title">Internet (1989↗)</div>
+        <ul>
+          <li><strong>Cognitif :</strong> multitâche, surcharge info, réseaux sociaux → écologie attentionnelle.</li>
+          <li><strong>Culturel :</strong> globalisation, identités en réseau, marchés de la rencontre.</li>
+          <li><strong>Bio :</strong> sédentarité numérique, sommeil fragmenté, microbiote occidental.</li>
+        </ul>
+      </div>
+      <div class="tl-item">
+        <div class="tl-title">IA Générative (2017↗)</div>
+        <ul>
+          <li><strong>Cognitif :</strong> offload vers IA (mémoire, rédaction, code) → métacognition primordiale.</li>
+          <li><strong>Culturel :</strong> nouveaux métiers cognitifs, éducation assistée par modèles.</li>
+          <li><strong>Cybernétique :</strong> boucles homme‑IA (agents, copilotes, neuro‑interfaces).</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2>2) Modèle opératoire : matrice H(t)</h2>
+    <div class="card">
+      <p>Pour intégrer l'évolution humaine dans nos simulations DTSC, introduire une matrice/tenseur <span class="kbd">H(t)</span> modulant les transitions sociales et les productivités techniques.</p>
+      <div class="grid cols-2">
+        <div>
+          <h3>Composantes de H(t)</h3>
+          <ul>
+            <li><strong>Nutrition & métabolisme</strong> (régimes, obésogénicité, tolérances).</li>
+            <li><strong>Pathogènes & immunité</strong> (exposition, hygiène, vaccins).</li>
+            <li><strong>Neuro‑cognition</strong> (littératie, attention, mémoire externe).</li>
+            <li><strong>Rythmes</strong> (sommeil, chrono‑travail, lumière nocturne).</li>
+            <li><strong>Microbiote & exposome</strong> (antibiotiques, diètes, polluants).</li>
+            <li><strong>Cybernétique</strong> (taux d’outillage IA, interfaces).</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Insertion dans DTSC</h3>
+          <ol>
+            <li>Remplacer les constantes humaines par <span class="kbd">paramètres dépendants de t</span>.</li>
+            <li>Ajouter un <strong>canal de rétroaction</strong> T→H et C→H (ex. scolarité → H_cognition).</li>
+            <li>Introduire des <strong>décalages</strong> (lags) : génétique (lents), culturel (rapide), techno (très rapide).</li>
+          </ol>
+        </div>
+      </div>
+      <div class="schema">
+        <div class="eq">Production(t) = A(T,C) · L(H) · K(T) · f(Institutions(C), Réseaux(T,C), Santé(H))</div>
+        <p class="small">Exemple de couplage macro : les capacités de travail cognitif <em>L(H)</em> dépendent de la santé métabolique, du sommeil et de l'externalisation IA.</p>
+      </div>
+    </div>
+
+    <h2>3) Indices empiriques (non exhaustif)</h2>
+    <div class="grid cols-3">
+      <div class="card warm">
+        <h3>Adaptations alimentaires</h3>
+        <ul>
+          <li>Amidon & diètes céréalières (copies d’amylase, diversité inter‑populations).</li>
+          <li>Tolérances aux produits laitiers (persistances enzymatiques variables).</li>
+          <li>Carences et sélection en milieux pauvres en micronutriments.</li>
+        </ul>
+      </div>
+      <div class="card warm">
+        <h3>Pathogènes & immunité</h3>
+        <ul>
+          <li>Pressions des foyers denses post‑néolithiques (charges virales/bactériennes).</li>
+          <li>Coevolution hôte‑pathogène (résistances, coûts).</li>
+        </ul>
+      </div>
+      <div class="card warm">
+        <h3>Neuro‑apprentissages</h3>
+        <ul>
+          <li>Plasticité liée à la lecture/écriture et à l’éducation massive.</li>
+          <li>Outils cognitifs externes (livre→moteur de recherche→IA).</li>
+        </ul>
+      </div>
+    </div>
+    <p class="small">Remarque : ces tendances agrègent gènes, environnements et cultures. Elles se manifestent en distributions, pas en essences.</p>
+
+    <h2>4) Prévisions : prochaines mutations (2025→2200)</h2>
+    <div class="grid cols-3">
+      <div class="card ok">
+        <h3>Scénario A — <em>Symbiose douce</em> (prob. élevée)</h3>
+        <ul>
+          <li><strong>Culturel :</strong> alphabétisation IA universelle, école métacognitive.</li>
+          <li><strong>H(t) :</strong> amélioration sommeil/chronobiologie par politiques de santé.</li>
+          <li><strong>Cyber :</strong> copilotes ubiquitaires, prothèses auditives/visuelles intelligentes.</li>
+          <li><strong>Effet :</strong> productivité cognitive ↑, inégalités modérées par accès public.</li>
+        </ul>
+      </div>
+      <div class="card warn">
+        <h3>Scénario B — <em>Divergence assistée</em> (risque)</h3>
+        <ul>
+          <li><strong>Bio‑tech :</strong> sélection d’embryons/édition ciblée chez élites → <em>hétérochronie</em> humaine.</li>
+          <li><strong>Culturel :</strong> marchés de l’attention extrêmes, polarisation cognitive.</li>
+          <li><strong>H(t) :</strong> gradients de capacités (santé, cognition) ↗.</li>
+          <li><strong>Effet :</strong> tension politique, verrouillages technocratiques.</li>
+        </ul>
+      </div>
+      <div class="card ok">
+        <h3>Scénario C — <em>Bio‑restauration</em> (opportunité)</h3>
+        <ul>
+          <li><strong>Santé publique :</strong> microbiome‑centric, diètes régénératives, ville circadienne.</li>
+          <li><strong>Tech :</strong> IA santé personnelle, détox numérique contrôlée par design.</li>
+          <li><strong>Effet :</strong> charge mentale ↓, capacités d’apprentissage ↑ populationnelles.</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3>Fenêtres de mutation (horizon 50–150 ans)</h3>
+    <ul class="pilllist">
+      <li class="pill">Éducation IA → <strong>métacognition de masse</strong></li>
+      <li class="pill">Génomique reproductive → <strong>sélection polygénique</strong> encadrée</li>
+      <li class="pill">Interfaces neurales non‑invasives → <strong>couplage homme‑modèle</strong></li>
+      <li class="pill">Écologie attentionnelle → <strong>réhabilitation des temps longs</strong></li>
+      <li class="pill">Politiques chrono‑urbaines → <strong>réalignement veille/sommeil</strong></li>
+    </ul>
+
+    <div class="callout">
+      <strong>Hypothèse centrale :</strong> la « prochaine mutation » sera <em>composite</em> : principalement culturelle et cybernétique (décennies), partiellement génétique (horizon siècle), fortement épigénétique et microbiotique (immédiat), avec effets macro mesurables sur la matrice H(t).
+    </div>
+
+    <h2>5) Indicateurs & falsifiables</h2>
+    <div class="grid cols-2">
+      <div class="card">
+        <h3>Indicateurs à suivre</h3>
+        <ul>
+          <li>Temps de sommeil moyen, dette chronique, exposition lumière nocturne.</li>
+          <li>Compétences métacognitives (population), taux d’usage d’outils IA par tâche.</li>
+          <li>Prévalences métaboliques (obésité, diabète) et réversibilité via diètes/microbiote.</li>
+          <li>Adoption des interfaces <em>hands‑free</em> et neuro‑perceptives.</li>
+          <li>Politiques bioéthiques sur sélection/édition germinale.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Tests de réfutation</h3>
+        <ul>
+          <li>Absence d’amélioration des performances cognitives malgré IA per capita → revoir couplage.</li>
+          <li>Homogénéité des capacités malgré marchés génomiques → régulations dominantes.</li>
+          <li>Pas d’effet chrono‑politiques sur santé/scolarité → hypothèses sommeil à corriger.</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2>6) Guide d’intégration dans nos fichiers DTSC</h2>
+    <ol>
+      <li>Créer un module <span class="kbd">H_matrix.js</span> décrivant H(t) par époques/scénarios.</li>
+      <li>Dans la boucle processuelle, ajouter <span class="kbd">updateHumanState(t, T, C)</span> qui met à jour H(t).</li>
+      <li>Exposer des <strong>curseurs</strong> UI : <em>Sommeil, Diète, IA‑offloading, Éducation, Bio‑tech</em>.</li>
+      <li>Tracer <em>Capacité cognitive effective</em> = g(H) et <em>Diffusion des innovations</em> = F(H,T,C).</li>
+    </ol>
+
+    <footer>
+      Version 0.1 – Annexe « Évolution Humaine » pour DTSC. Document conceptuel, à spécialiser avec nos données.
+    </footer>
+  </main>
+</body>
+</html>
